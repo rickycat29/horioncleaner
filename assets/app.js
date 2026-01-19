@@ -3,7 +3,7 @@
 // ===============================
 
 // 🔧 Cambia qui:
-const DOWNLOAD_URL = "https://example.com/HorionCleanerSetup.exe";
+const DOWNLOAD_URL = "https://raw.githubusercontent.com/rickycat29/horioncleaner/main/APP/HorionCleaner.exe";
 const VERSION = "v0 | Beta!";
 
 // ===============================
