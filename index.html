@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0b0b" />
+  <meta name="description" content="Horion Cleaner — pulizia semplice, sicura e veloce. Dark UI, red accents." />
+  <title>Horion Cleaner</title>
+
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <div class="brand">
+        <div class="dot"></div>
+        <span>HORION CLEANER</span>
+      </div>
+    </header>
+
+    <main class="hero">
+      <div class="hero-grid">
+        <section class="card hero-left reveal">
+          <div class="kicker">
+            <b>Windows only!</b>
+          </div>
+
+          <h1>Horion Cleaner</h1>
+          <p class="sub">
+            Un cleaner semplice e veloce: rimuove file temporanei e cache comuni senza “fare cose strane”.
+            Modalità sicura inclusa, e una sezione Gaming con tweaks e power plan.
+          </p>
+
+          <div class="cta-row" id="download">
+            <a class="btn btn-primary" id="downloadBtn" href="#" download>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 3v10m0 0 4-4m-4 4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4 17v3h16v-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              Download
+            </a>
+
+            <button class="btn" id="copyLinkBtn" type="button" title="Copia link download">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M9 9h10v10H9V9Z" stroke="currentColor" stroke-width="2" />
+                <path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1" stroke="currentColor" stroke-width="2" />
+              </svg>
+              Copia link
+            </button>
+          </div>
+
+          <div class="meta">
+            <span><i></i> 100% Safe </span>
+            <span><i></i> UI dark/red</span>
+            <span><i></i> Beta</span>
+          </div>
+        </section>
+
+        <aside class="card hero-right reveal">
+          <div class="app-card">
+            <div class="app-head">
+              <div class="app-icon" aria-label="Horion Cleaner icon">
+                <img src="assets/icon.png" alt="Horion Cleaner icon" />
+              </div>
+              <div class="app-info">
+                <h2>Client</h2>
+                <p>HorionCleaner.exe</p>
+              </div>
+            </div>
+
+            <div class="dl">
+              <div class="version">
+                Versione <code id="ver">v0 - Beta Only!</code>
+              </div>
+              <a class="btn btn-primary" id="downloadBtn2" href="#" download>Scarica ora</a>
+            </div>
+
+            <div class="notes">
+              Suggerimento: esegui come amministratore solo se vuoi includere le cartelle di sistema
+              (Windows Temp / Prefetch). Per uso normale non serve.
+            </div>
+          </div>
+
+          <div class="app-card" id="changelog">
+            <div class="app-info app-info-compact">
+              <h2>Changelog</h2>
+              <p>Ultime modifiche / note release</p>
+            </div>
+
+            <ul class="changelog-list">
+              <li>UI dark + red, rounded panels, accordion.</li>
+              <li>Analisi + pulizia con modalità sicura.</li>
+              <li>Gaming: power plan + azioni opt-in.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <section class="section" id="features">
+        <h3>Features</h3>
+
+        <div class="grid">
+          <div class="feat reveal">
+            <strong>
+              <span class="icon-mini">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 3l8 4v6c0 5-3.5 8-8 8s-8-3-8-8V7l8-4Z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </span>
+              Modalità sicura
+            </strong>
+            <p>Evita file recenti/in uso e riduce il rischio di errori. Pulizia “safe-first”.</p>
+          </div>
+
+          <div class="feat reveal">
+            <strong>
+              <span class="icon-mini">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M3 6h18M7 6V4h10v2m-1 0 1 15H7L8 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              Cleaner mirato
+            </strong>
+            <p>Temp, cache comuni, recenti, (opzionale) cestino. Niente di strano o unsafe.</p>
+          </div>
+
+          <div class="feat reveal">
+            <strong>
+              <span class="icon-mini">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 14c2 0 2-4 4-4s2 4 4 4 2-8 4-8 2 8 4 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+              Gaming tweaks
+            </strong>
+            <p>Power plan e azioni selezionabili (chiudi app pesanti, priorità, shader cache).</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Horion Cleaner</div>
+      <div class="foot-right">Made with ❤️ by horion & CG-AI</div>
+    </footer>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

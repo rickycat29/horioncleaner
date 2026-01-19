@@ -1,0 +1,50 @@
+// ===============================
+// Horion Cleaner Website config
+// ===============================
+
+// 🔧 Cambia qui:
+const DOWNLOAD_URL = "https://example.com/HorionCleanerSetup.exe";
+const VERSION = "v0 | Beta!";
+
+// ===============================
+// Init
+// ===============================
+document.addEventListener("DOMContentLoaded", () => {
+  // Set year
+  const yearEl = document.getElementById("year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Set version
+  const verEl = document.getElementById("ver");
+  if (verEl) verEl.textContent = VERSION;
+
+  // Set download links
+  const dl1 = document.getElementById("downloadBtn");
+  const dl2 = document.getElementById("downloadBtn2");
+  if (dl1) dl1.href = DOWNLOAD_URL;
+  if (dl2) dl2.href = DOWNLOAD_URL;
+
+  // Reveal on scroll
+  const revealEls = Array.from(document.querySelectorAll(".reveal"));
+  const io = new IntersectionObserver(
+    (entries) => entries.forEach(e => e.isIntersecting && e.target.classList.add("on")),
+    { threshold: 0.12 }
+  );
+  revealEls.forEach(el => io.observe(el));
+
+  // Copy link
+  const copyBtn = document.getElementById("copyLinkBtn");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(DOWNLOAD_URL);
+
+        const old = copyBtn.innerHTML;
+        copyBtn.textContent = "Copiato ✔";
+        setTimeout(() => (copyBtn.innerHTML = old), 1100);
+      } catch {
+        alert("Impossibile copiare. Link: " + DOWNLOAD_URL);
+      }
+    });
+  }
+});
