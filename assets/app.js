@@ -4,6 +4,7 @@
 
 // 🔧 Cambia qui:
 const DOWNLOAD_URL = "https://raw.githubusercontent.com/rickycat29/horioncleaner/main/APP/HorionCleaner.exe";
+const SRC_URL = "https://github.com/rickycat29/HorionCleanerAPP";
 const VERSION = "v0 | Beta!";
 
 // ===============================
@@ -32,19 +33,11 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   revealEls.forEach(el => io.observe(el));
 
-  // Copy link
-  const copyBtn = document.getElementById("copyLinkBtn");
-  if (copyBtn) {
-    copyBtn.addEventListener("click", async () => {
-      try {
-        await navigator.clipboard.writeText(DOWNLOAD_URL);
-
-        const old = copyBtn.innerHTML;
-        copyBtn.textContent = "Copiato ✔";
-        setTimeout(() => (copyBtn.innerHTML = old), 1100);
-      } catch {
-        alert("Impossibile copiare. Link: " + DOWNLOAD_URL);
-      }
+  // Source link
+  const scl = document.getElementById("sourceLinkBtn");
+  if (scl) {
+    scl.addEventListener("click", () => {
+      window.open(SRC_URL, "_blank", "noopener");
     });
-  }
+  } // se funziona sborro --> FUNZIONA, SBORRO!
 });
